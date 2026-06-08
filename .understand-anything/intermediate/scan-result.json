@@ -1,0 +1,48 @@
+{
+  "name": "Flask_demo",
+  "description": "无可用的项目描述。",
+  "languages": ["html", "json", "python", "unknown"],
+  "frameworks": ["Flask"],
+  "files": [
+    {
+      "path": ".claude/settings.local.json",
+      "language": "json",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "templates/index.html",
+      "language": "html",
+      "sizeLines": 15,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "templates/news.html",
+      "language": "html",
+      "sizeLines": 11,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "web.py",
+      "language": "python",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 5,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "importMap": {
+    ".claude/settings.local.json": [],
+    ".understand-anything/.understandignore": [],
+    "templates/index.html": [],
+    "templates/news.html": [],
+    "web.py": []
+  }
+}

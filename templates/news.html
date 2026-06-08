@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻页面</title>
+</head>
+
+<body>
+    <h1>中国移动新闻</h1>
+    <div>这里是最新发布的新闻内容...</div>
+    
+    <form action="/submit" method="post">
+    <!-- 文本输入 -->
+    <label for="name">用户名：</label>
+    <input type="text" id="name" name="name" placeholder="请输入" required>
+
+    <!-- 密码 -->
+    <input type="password" name="pwd">
+
+    <!-- 单选、多选 -->
+    <!-- value属性指定了当该单选按钮被选中时，提交到服务器的值 -->
+    <input type="radio" name="gender" value="male"> 男
+    <input type="radio" name="gender" value="female"> 女
+    <input type="checkbox" name="hobby" value="code"> 编程
+
+    <!-- 下拉选择 -->
+    <label for="city">城市：</label>
+    <select id="city" name="city" class="city-select">
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="gz">广州</option>
+        <option value="sz">深圳</option>
+        <option value="cd">成都</option>
+    </select>
+
+    <!-- 多行文本 -->
+    <label for="bio">简介：</label>
+    <textarea id="bio" name="bio" rows="4" cols="30" class="bio-textarea"></textarea>   
+
+    <!-- 按钮 -->
+    <button type="submit">提交</button>
+    <input type="reset" value="重置">
+</form>
+</body>
+
+
+</html>

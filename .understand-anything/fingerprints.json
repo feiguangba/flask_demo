@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "not-a-git-repo",
+  "generatedAt": "2026-06-05T02:13:00.129Z",
+  "files": {
+    ".claude/settings.local.json": {
+      "filePath": ".claude/settings.local.json",
+      "contentHash": "2a3470ddd1554f7336aa2a25285a4c0c58db87242261f6ed49a8307a59ea1fca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "ab6fd1f16790f01f799fcb5b0e3bb15600f5fb9cb7181d12f5bf2dfa7e6f3ebb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    "templates/index.html": {
+      "filePath": "templates/index.html",
+      "contentHash": "f29df0d86bb11c3b94044caed96c86648eddb15a92e678599cfe311bc4015301",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    "templates/news.html": {
+      "filePath": "templates/news.html",
+      "contentHash": "2c8c47adab0bc27e2b05233b4bd8fc0a39acf53cfd34b3ef0541386733481c29",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "web.py": {
+      "filePath": "web.py",
+      "contentHash": "76348e27e5c6a159f8044eb360ea1d6eea02e2479fa31984bb91ca8529362975",
+      "functions": [
+        {
+          "name": "index",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "get_news",
+          "params": [],
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "flask",
+          "specifiers": [
+            "Flask",
+            "render_template"
+          ]
+        }
+      ],
+      "exports": [
+        "index",
+        "get_news"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Flask_demo",
+    "languages": ["html", "json", "python"],
+    "frameworks": ["Flask"],
+    "description": "一个极简的 Flask Web 演示应用，包含两个路由和两个 Jinja2 HTML 模板页面。",
+    "analyzedAt": "2026-06-05T00:00:00+08:00",
+    "gitCommitHash": "not-a-git-repo"
+  },
+  "nodes": [
+    {
+      "id": "file:web.py",
+      "type": "file",
+      "name": "web.py",
+      "filePath": "web.py",
+      "summary": "Flask Web 应用的入口文件，定义了两个路由（首页 /show/info 和新闻页 /get/news），分别渲染对应的 HTML 模板，并在直接运行时以 debug 模式启动开发服务器。",
+      "tags": ["入口点", "flask", "api-handler", "web"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:web.py:index",
+      "type": "function",
+      "name": "index",
+      "filePath": "web.py",
+      "lineRange": [5, 7],
+      "summary": "Flask 路由处理函数，绑定到 /show/info 路径，渲染并返回 index.html 模板页面。",
+      "tags": ["路由处理", "flask", "视图函数"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:web.py:get_news",
+      "type": "function",
+      "name": "get_news",
+      "filePath": "web.py",
+      "lineRange": [10, 11],
+      "summary": "Flask 路由处理函数，绑定到 /get/news 路径，渲染并返回 news.html 模板页面。",
+      "tags": ["路由处理", "flask", "视图函数"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:templates/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "templates/index.html",
+      "summary": "Flask 应用的主页 HTML 模板，展示「中国移动」公司简介、官网超链接以及新闻页面导航入口。",
+      "tags": ["template", "html", "前端", "主页"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:templates/news.html",
+      "type": "file",
+      "name": "news.html",
+      "filePath": "templates/news.html",
+      "summary": "Flask 应用的新闻页面 HTML 模板，展示「中国移动新闻」标题和最新新闻内容的占位区域。",
+      "tags": ["template", "html", "前端", "新闻页"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.claude/settings.local.json",
+      "type": "config",
+      "name": "settings.local.json",
+      "filePath": ".claude/settings.local.json",
+      "summary": "Claude Code 本地配置文件，为 Understand-Anything 插件授予多个 Bash 命令的执行权限，确保分析工具可以正常操作项目目录。",
+      "tags": ["configuration", "security", "permissions", "开发工具"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Understand-Anything 插件的忽略规则配置文件，采用 .gitignore 语法定于分析时需要排除的文件和目录模式。",
+      "tags": ["configuration", "分析工具", "ignore-patterns"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:web.py",
+      "target": "function:web.py:index",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:web.py",
+      "target": "function:web.py:get_news",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:web.py",
+      "target": "function:web.py:index",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:web.py",
+      "target": "function:web.py:get_news",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:.claude/settings.local.json",
+      "target": "file:web.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:web.py",
+      "target": "file:templates/index.html",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:web.py",
+      "target": "file:templates/news.html",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:application",
+      "name": "应用层",
+      "description": "Flask Web 应用入口与路由处理层，定义 HTTP 路由端点（/show/info 与 /get/news），渲染对应的 HTML 模板并启动开发服务器。",
+      "nodeIds": ["file:web.py"]
+    },
+    {
+      "id": "layer:ui",
+      "name": "表示层",
+      "description": "Jinja2 HTML 模板层，包含应用主页与新闻页的页面结构与内容呈现，由应用层路由渲染后返回给客户端。",
+      "nodeIds": ["file:templates/index.html", "file:templates/news.html"]
+    },
+    {
+      "id": "layer:config",
+      "name": "配置层",
+      "description": "开发工具与 IDE 配置文件，包含 Claude Code 本地权限配置以及 Understand-Anything 分析工具的忽略规则，用于控制开发与代码分析行为。",
+      "nodeIds": ["config:.claude/settings.local.json", "file:.understand-anything/.understandignore"]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "应用入口与路由定义",
+      "description": "web.py 是 Flask 应用的核心入口文件，定义了两个 HTTP 路由端点。通过 @app.route() 装饰器将 URL 路径映射到视图函数。",
+      "nodeIds": ["file:web.py"],
+      "languageLesson": "Flask 的 @app.route() 装饰器将 Python 函数注册为 HTTP 请求处理器。"
+    },
+    {
+      "order": 2,
+      "title": "主页模板 — 公司信息展示",
+      "description": "index.html 是应用的主页 HTML 模板，由 /show/info 路由渲染。",
+      "nodeIds": ["file:templates/index.html"],
+      "languageLesson": "Jinja2 是 Flask 默认的模板引擎，模板文件放置在 templates/ 目录下。"
+    },
+    {
+      "order": 3,
+      "title": "新闻页面模板 — 动态内容占位",
+      "description": "news.html 是新闻页面 HTML 模板，由 /get/news 路由渲染。",
+      "nodeIds": ["file:templates/news.html"]
+    },
+    {
+      "order": 4,
+      "title": "代码分析工具的忽略规则",
+      "description": ".understandignore 文件定义了分析时需要排除的文件和目录模式。",
+      "nodeIds": ["file:.understand-anything/.understandignore"],
+      "languageLesson": ".gitignore 语法使用 glob 模式匹配路径。"
+    },
+    {
+      "order": 5,
+      "title": "Claude Code 开发环境配置",
+      "description": "settings.local.json 是 Claude Code 本地配置文件。",
+      "nodeIds": ["config:.claude/settings.local.json"],
+      "languageLesson": "Claude Code 的 settings.local.json 采用 JSON 格式配置权限规则。"
+    }
+  ]
+}

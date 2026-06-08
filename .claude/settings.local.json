@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo PROJECT_ROOT=d:/Project/Flask_demo)",
+      "Bash(test -d d:/Project/Flask_demo)",
+      "Bash(echo \"EXISTS=yes\")",
+      "Bash(echo \"EXISTS=no\")",
+      "Bash(git rev-parse *)",
+      "Bash([ -f \"$PROJECT_ROOT/.understand-anything/knowledge-graph.json\" ])",
+      "Bash(ls __TRACKED_VAR__/.understand-anything/*knowledge-graph*.json)",
+      "Bash([ -f \"$PROJECT_ROOT/.understand-anything/.understandignore\" ])"
+    ]
+  }
+}
