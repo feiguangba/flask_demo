@@ -8,7 +8,15 @@
       "Bash(git rev-parse *)",
       "Bash([ -f \"$PROJECT_ROOT/.understand-anything/knowledge-graph.json\" ])",
       "Bash(ls __TRACKED_VAR__/.understand-anything/*knowledge-graph*.json)",
-      "Bash([ -f \"$PROJECT_ROOT/.understand-anything/.understandignore\" ])"
+      "Bash([ -f \"$PROJECT_ROOT/.understand-anything/.understandignore\" ])",
+      "Bash(git remote *)",
+      "Bash(ssh -o ConnectTimeout=5 -T git@github.com)",
+      "Bash(ssh -vv -o ConnectTimeout=5 -T git@github.com)",
+      "Bash(echo 'echo yc186102')",
+      "Bash(chmod +x /tmp/askpass.sh)",
+      "Bash(SSH_ASKPASS=/tmp/askpass.sh DISPLAY= ssh-add ~/.ssh/id_ed25519)",
+      "Bash(rm -f /tmp/askpass.sh)",
+      "Bash(SSH_ASKPASS_REQUIRE=force SSH_ASKPASS=/tmp/askpass.sh DISPLAY=dummy ssh-add ~/.ssh/id_ed25519)"
     ]
   }
 }
